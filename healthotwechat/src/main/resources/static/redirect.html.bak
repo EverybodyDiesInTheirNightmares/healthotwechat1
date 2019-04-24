@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>即将跳转</title>
+    <style>  #txt{  width: 200px;  height: 40px;  }  .one{  border: 1px solid lightsalmon;  background: lightsalmon;  color: white;  }  /*a{  color: black;  text-decoration: none;  font-size: 14px;  }*/</style>
+</head>
+
+<body>
+<h1>即将跳转到绵阳市中心医院挂号页面</h1>  <input type="button" value="5秒后跳转" id="txt" />
+<script>  window.onload=function(){  var x = document.getElementById("txt");  var timer = setInterval(func,1000);  var time = 5;  function func(){  x.value = "剩余"+time+"秒";  time--;  if(time<0){
+    clearInterval(timer);
+    x.setAttribute("class","one");
+    x.value="即将跳转loading...";
+    window.location.href="http://220.166.57.123/";  }  }  }
+    </script>
+</body>
+</html>

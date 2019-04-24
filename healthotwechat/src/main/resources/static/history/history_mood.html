@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>心情历史数据</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//tags -->
+	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/appointment_style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/font-awesome.css" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
+
+
+	<style>
+		.carousel-caption-1 {
+			position: inherit;
+			min-height: 80px;
+			padding-top: 0em;
+			text-align: center;
+			color: #EEEEEE;
+		}
+		.container_1_ {
+			width: 860px;
+			margin: auto;
+			padding: 30px 30px 30px;
+			box-sizing: border-box;
+			-webkit-box-shadow: 0 0 40px #aaa;
+			-moz-box-shadow: 0 0 40px #aaa;
+			box-shadow: 0 0 40px #aaa;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			transition: all 0.5s;
+			-o-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			-webkit-box-shadow: 0px 1px 8px 0px rgba(158, 158, 158, 0.75);
+			-moz-box-shadow: 0px 1px 8px 0px rgba(158, 158, 158, 0.75);
+			box-shadow: 0px 1px 8px 0px rgba(158, 158, 158, 0.75);
+		}
+		.banner_inner_content_agile_w3l {
+			background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/2.jpg) no-repeat;
+			background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/2.jpg) no-repeat;
+			background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/2.jpg) no-repeat;
+			background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/2.jpg) no-repeat;
+			background-size: cover;
+			min-height: 750px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header" id="home">
+		<div class="top_menu_w3layouts">
+<div class="container">
+			<div class="header_left">
+				<ul>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i> XXXXXXXXXX</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> 111 1111 1111</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="">email@163.com</a></li>
+
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+			</div>
+		</div>
+
+		<div class="content white">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<a class="navbar-brand" href="index.html">
+							<h1><span class="fa fa-stethoscope" aria-hidden="true"></span>好健</h1>
+						</a>
+					</div>
+					<!--/.navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav>
+							<ul class="nav navbar-nav">
+								<li><a href="http://127.0.0.1:8080/index.html" class="active">首页</a></li>
+								<li><a href="http://127.0.0.1:8080/about.html">关于</a></li>
+
+								<li><a href="http://127.0.0.1:8080/entry.html">服务</a></li>
+
+								<li><a href="#">联系我们</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- banner -->
+<div class="banner_inner_content_agile_w3l">
+
+</div>
+	<!--//banner -->
+
+
+	<div class="emergency_cases_bt">
+		<div class="container">
+			<div class="heading">
+				<h1>心情历史数据</h1>
+			</div>
+		<div class="emergency_cases_top">
+			<div class="w3ls-banner">
+
+					<div class="container_1_">
+						<div>
+							<div id="echartsPie" style="width: 800px;height:400px;"></div>
+							<input type="submit" value="&emsp;查询&emsp;" id="sbt" />
+							<p id="tP"></p>
+						</div>
+					</div>
+			</div>
+
+			<div class="clearfix"></div>
+			</div>
+		</div>
+		</div>
+	<div class="footer_wthree_agile">
+
+	</div>
+
+	<script src="echarts.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<script>
+		$('ul.dropdown-menu li').hover(function () {
+			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+		}, function () {
+			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+		});
+	</script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
+	<script>
+		$("#sbt").click(function(){
+			$.ajax({
+				//几个参数需要注意一下
+				type: "Get",//方法类型
+				dataType: "json",//预期服务器返回的数据类型
+				url: "/mood/history",//url
+				success: function (result) {
+					$("#commit").css("display","none");
+					$("#sbt").css("display","none");
+					$("#tP").append(result.message);
+					if (result.code == 0) {
+
+						var echartsPie;
+						var json = [
+							{value:result.data.good,name:'好'},
+							{value:result.data.general,name:'一般'},
+							{value:result.data.poor,name:'差'}
+						];
+						var option = {
+							title : {
+								text: '心情图',
+								subtext: '',
+								x:'center'
+							},
+							tooltip : {
+								trigger: 'item',
+								formatter: "{a} <br/>{b} : {c}"
+							},
+							legend: {
+								orient : 'vertical',
+								x : 'left',
+								data:['好','一般','差']
+							},
+							toolbox: {
+								show : true,
+								feature : {
+									mark : {show: true},
+									dataView : {show: true, readOnly: false},
+									magicType : {
+										show: true,
+										type: ['pie', 'funnel'],
+										option: {
+											funnel: {
+												x: '25%',
+												width: '50%',
+												funnelAlign: 'left',
+												max: 1548
+											}
+										}
+									},
+									restore : {show: true},
+									saveAsImage : {show: true}
+								}
+							},
+							calculable : true,
+							series : [
+								{
+									name:'心情图',
+									type:'pie',
+									radius : '55%',//饼图的半径大小
+									center: ['40%', '55%'],//饼图的位置
+									data:json
+								}
+							]
+						};
+
+						echartsPie = echarts.init(document.getElementById('echartsPie'));
+						$(function(){
+							echartsPie.setOption(option);
+
+						});
+					}else {
+						var message = result.message;
+						alert(message);
+						window.location.href="http://127.0.0.1:8080/entry.html";
+					}
+				},
+				error : function(result) {
+					alert("服务器出错");
+					window.location.href="http://127.0.0.1:8080/entry.html";
+				}
+
+			});
+		})
+	</script>
+
+</body>
+
+</html>
